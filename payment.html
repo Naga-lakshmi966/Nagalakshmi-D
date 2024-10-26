@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus Booking Payment</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f4f4f9;
+        }
+        .container {
+            width: 400px;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #fff;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+            color: #333;
+        }
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .btn {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            background-color: red;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Bus Booking Payment</h2>
+        <form id="paymentForm">
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="busRoute">Select Bus Route</label>
+                <select id="busRoute" name="busRoute" required>
+                    <option value="">Choose a Route</option>
+                    <option value="Route 1">Route 1</option>
+                    <option value="Route 2">Route 2</option>
+                    <option value="Route 3">Route 3</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="seats">Number of Seats</label>
+                <input type="number" id="seats" name="seats" min="1" required>
+            </div>
+            <div class="form-group">
+                <label for="paymentMethod">Payment Method</label>
+                <select id="paymentMethod" name="paymentMethod" required>
+                    <option value="">Choose a Payment Method</option>
+                    <option value="Credit Card">Credit Card</option>
+                    <option value="Debit Card">Debit Card</option>
+                    <option value="PayPal">PayPal</option>
+                </select>
+            </div>
+            <button type="button" class="btn" onclick="submitPayment()">Submit Payment</button>
+        </form>
+    </div>
+
+    <script>
+        function submitPayment() {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const busRoute = document.getElementById('busRoute').value;
+            const seats = document.getElementById('seats').value;
+            const paymentMethod = document.getElementById('paymentMethod').value;
+
+            if (name && email && busRoute && seats && paymentMethod) {
+                alert("Payment submitted successfully!\n\nDetails:\nName: " + name + "\nEmail: " + email + "\nRoute: " + busRoute + "\nSeats: " + seats + "\nPayment Method: " + paymentMethod);
+            } else {
+                alert("Please fill in all fields.");
+            }
+        }
+    </script>
+</body>
+</html>

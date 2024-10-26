@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket Details</title>
+    <style>
+        body {
+            background-color: #FF4646;
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        form {
+            background-color: white;
+            padding: 30px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            margin: auto;
+        }
+        label {
+            margin-top: 10px;
+            display: block;
+        }
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+        }
+        button {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: red;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+<form id="cancelForm">
+    <h2><center>View M-Ticket</center></h2>
+    <label for="enter ticket no">Enter Ticket No:</label>
+    <input type="text" id="enter ticket no" name="Enter Ticket No" required>
+    <br><br>
+    <label for="enter mobile no">Enter Mobile No:</label>
+    <input type="enter mobile no" id="enter mobile no" name="enter mobile no" required>
+    <br><br>
+    <button id="submitbutton">Search ticket details</button>
+</form>
+
+<div id="message" style="margin-top: 20px;"></div>
+
+<script>
+    document.getElementById("submitbutton").addEventListener("click",function(){
+    alert("Ticket details has been fetched successfully");
+   });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rate Us</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: rgba(255, 255, 255, 0.825);
+            background-position: center;
+            color: black;
+        }
+        .container {
+            text-align: center;
+            padding: 50px;
+            background-color: rgba(0, 0, 0, 0.7); 
+            border-radius: 10px;
+            max-width: 600px;
+            margin: auto;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        .rating {
+            margin: 20px 0;
+        }
+        .star {
+            font-size: 30px;
+            cursor: pointer;
+            color: yellow;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Rate Us!</h1>
+    <p>Your feedback is important to us.</p>
+    <div class="rating">
+        <span class="star" onclick="rate(1)">★</span>
+        <span class="star" onclick="rate(2)">★</span>
+        <span class="star" onclick="rate(3)">★</span>
+        <span class="star" onclick="rate(4)">★</span>
+        <span class="star" onclick="rate(5)">★</span>
+    </div>
+    <p id="message"></p>
+</div>
+
+<script>
+    function rate(stars) {
+        const message = document.getElementById('message');
+        message.textContent = `Thank you for rating us ${stars} star${stars > 1 ? 's' : ''}!`;
+    }
+</script>
+
+</body>
+</html>

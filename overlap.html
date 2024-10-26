@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+     body{
+        background-image: url("Redbuss.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+     }
+     .search-container {
+        max-width: 600px;
+        margin: 50px auto;
+        padding: 20px;
+        background: white;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    input {
+        width: calc(100% - 22px);
+        padding: 10px;
+        margin: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    .text-overlay{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: black;
+      font-size: 24px;
+      font-weight: bold;
+      background-color: rgba(255, 255, 255, 0.623);
+      padding: 10px;
+      border-radius: 5px;
+    }
+    button {
+        width: 100%;
+        padding: 10px;
+        background:red;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    button:hover {
+        background: #0056b3;
+    }
+</style>
+<body>
+        <div class="text-overlay">
+        <h1>Online Bus Ticket Booking</h1>
+        <h4>Assured seat of your choice</h4>
+        <form id="searchForm">
+            <input type="text" id="from" placeholder="FROM" required>
+            <br>
+            <br>
+            <input type="text" id="to" placeholder="TO" required>
+            <br>
+            <br>
+            <input type="date" id="departureDate" required>
+            <br>
+            <br>
+            <input type="number" id="passengers" placeholder="Number of Passengers" min="1" required>
+            <br>
+            <br>
+            <button type="submit">Search Buses</button>
+        </form>
+        <div id="results"></div>
+        </div>
+    </div>
+</body>
+</html>
